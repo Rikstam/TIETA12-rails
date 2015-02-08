@@ -1,0 +1,49 @@
+<%= form_for @account do |f| %>
+<p>
+<%= f.label :code %><br>
+<%= f.text_field :code %>
+</p>
+
+<p>
+<%= f.label :name %><br>
+<%= f.text_field :name %>
+</p>
+
+<p>
+<%= f.label :amount %><br>
+<%= f.number_field :amount %>
+</p>
+
+
+<p>
+<%= f.submit class: 'button' %>
+</p>
+<% end %>
+
+
+</div>
+
+<div class = "row">
+<div class = "large-12 columns">
+
+<% if @account.errors.any? %>
+
+<div data-alert class = "alert-box warning">
+<%= pluralize(@account.errors.count, "error") %>
+detected in the input.
+<a href="#" class="close">&times;</a>
+
+</div>
+
+<% @account.errors.full_messages.each do |msg| %>
+<div data-alert class = "alert-box warning">
+<%= msg %>
+<a href="#" class="close">&times;</a>
+
+</div>
+
+<% end %>
+
+
+<% end %>
+</div>

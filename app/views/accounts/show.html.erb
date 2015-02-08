@@ -1,0 +1,11 @@
+<div class = "row">
+
+<div class = "large-12 columns">
+<h1>Your account <%= @account.id %> </h1>
+<h2>Balance: <%= @account.amount %></h2>
+<%= link_to 'Edit', edit_account_path(@account) %>
+
+<%= link_to 'Back', accounts_path %>
+
+</div>
+</div>
