@@ -25,11 +25,11 @@ ActiveRecord::Schema.define(version: 20150207203102) do
   end
 
   create_table "transfers", force: :cascade do |t|
-    t.integer  "from_account"
+    t.integer  "account_id"
     t.integer  "to_account"
     t.decimal  "amount"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

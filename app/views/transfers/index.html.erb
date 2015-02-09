@@ -1,0 +1,11 @@
+<div class = "row">
+
+<div class = "large-12 columns">
+<h1>Transfer history</h1>
+<ul>
+<% @transfers.each do |t| %>
+<li><%= t.amount %></li>
+<% end %>
+</ul>
+<div>
+</div>

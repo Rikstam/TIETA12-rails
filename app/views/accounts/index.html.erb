@@ -9,6 +9,9 @@
 <h3><%= account.name %></h3>
 <h4><%= account.amount %></h4>
 <%= link_to 'Show', account_path(account) %>
+<%= link_to 'Transfer', new_account_transfer_path(account) %>
+
+
 <%= link_to 'Edit', edit_account_path(account) %>
 <%= link_to 'Destroy', account_path(account), method: :delete, data:{confirm: 'Are you sure?'} %>
 </div>
@@ -16,7 +19,7 @@
 
 <% end %>
 <%= link_to 'New Account', new_account_path %>
-<%= link_to 'Transfer', transfer_path %>
+
 
 
 </div>

@@ -10,10 +10,12 @@ Rails.application.routes.draw do
 
   get 'quiz'=>'quiz#index'
 
-  get 'transfer'=>'transfers#new'
-  post 'transfer'=>'transfers#create'
+  ##get 'transfer'=>'transfers#new'
+  ##post 'transfer'=>'transfers#create'
 
-  resources :accounts
+  resources :accounts do
+    resources :transfers
+  end
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
