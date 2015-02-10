@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: transfers
+#
+#  id         :integer          not null, primary key
+#  account_id :integer
+#  to_account :integer
+#  amount     :decimal(, )
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Transfer < ActiveRecord::Base
   validates :amount, presence: true,  numericality: {greater_than: 0}
 
